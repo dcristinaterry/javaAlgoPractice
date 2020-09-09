@@ -2,7 +2,6 @@ package day2;
 
 public class ReverseLinkedList {
 	
-	
 	class ListNode {
 
 		int val;
@@ -21,7 +20,7 @@ public class ReverseLinkedList {
 		}
 	}
 	
-//	1 -> 2 ->3 -> 4 
+//  3 -> 4    ->	2 ->1  
 //	
 //	4 ->3 ->2 ->1
 	
@@ -49,7 +48,7 @@ public class ReverseLinkedList {
 	 }
 	 
 	 
-	 
+//	 4 <-3 <-2 ->1
 	 
 	 public static ListNode reverseListIterative(ListNode head) {
 	        /* Iterative algorithm to reverse nodes in linked list. 
