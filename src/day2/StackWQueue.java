@@ -7,7 +7,12 @@ public class StackWQueue {
 	   static Queue<Integer> queue = new LinkedList<Integer>();
 	    
 	    public void push(int value) {
-	   
+//	   1 -2 -3 -4- 5 - 6   remove 1 /  add will add at the end
+	    	
+//	    stack adds and removes at end 
+	    	
+//	    	1-2-3-4-5-6      2-3-4-5-6-1   3-4-5-6-1-2   4-5-6-1-2-3  5-6-1-2-3-4  6-1-2-3-4-5     6-5-4-3-2-1
+	    	
 	        queue.add(value);
 
 	        for (int i = 0; i < queue.size()-1; i++) {
