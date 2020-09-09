@@ -1,14 +1,41 @@
 package day2;
 
+import java.util.LinkedList;
+
 public class ReverseLinkedList {
 	
-	class ListNode {
+	public static ListNode mainHead;
+	
+	public static void main(String[] args) {
+		ListNode node1 = new ListNode(1);
+		ListNode node2 = new ListNode(2);
+		ListNode node3 = new ListNode(3);
+		ListNode node4 = new ListNode(4);
+		ListNode node5 = new ListNode(5);
+		
+		node1.next = node2;
+		node2.next = node3;
+		node3.next = node4;
+		node4.next = node5;
+		
+		mainHead=reverseList(node1);
+		
+		ListNode node = mainHead;
+		
+		while(node!=null) {
+			System.out.println(node.val);
+			node = node.next;
+		}
+		
+	}
+	
+	
+	public static class ListNode {
 
 		int val;
 		ListNode next;
 
-		ListNode() {
-		}
+	
 
 		ListNode(int val) {
 			this.val = val;
@@ -20,26 +47,27 @@ public class ReverseLinkedList {
 		}
 	}
 	
-//  3 -> 4    ->	2 ->1  
+//  3      4    ->	 2->1  
 //	
 //	4 ->3 ->2 ->1
 	
-	 public ListNode reverseList(ListNode head) {
-	        
+	 public static ListNode reverseList(ListNode head) {
+		
+		 
 	        if(head==null){
 	            return null;
 	        }
 	        
-	        ListNode node =head.next;
+	        ListNode currentNode =head.next;
 	        head.next = null;
 	       
 	        
-	        while(node != null){
+	        while(currentNode != null){
 	            ListNode previousHead = head;
 	        
-	            head = node;
-	            node = node.next;
-	            System.out.println(head.val);
+	            head = currentNode;
+	            currentNode = currentNode.next;
+	           
 	        
 	            head.next = previousHead;
 	        
